@@ -6,6 +6,9 @@ import { EbsStack } from "../lib/week1/ebs";
 import { CliStack } from "../lib/week1/cli";
 import { SslStack } from "../lib/week2/ssl";
 import { ElbStack } from "../lib/week2/elb";
+import { AsgStack } from "../lib/week2/asg";
+import { ColorStack } from "../lib/week2/color";
+
 
 
 const app = new cdk.App();
@@ -14,3 +17,6 @@ new EbsStack(app, "ebs");
 new CliStack(app, "cli");
 new SslStack(app, "ssl");
 new ElbStack(app, "elb");
+new AsgStack(app, "asg");
+new ColorStack(app, "color");
+
