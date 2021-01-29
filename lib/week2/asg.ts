@@ -24,7 +24,7 @@ export class AsgStack extends cdk.Stack {
       "curl http://169.254.169.254/latest/meta-data/public-ipv4 > /tmp/ip.txt"
     );
     user_data.addCommands("cp /tmp/ip.txt /var/www/html/index.html");
-    user_data.addCommands("## Simulate boot up by sleep command");
+    user_data.addCommands("## Simulate booting time by sleep command");
     user_data.addCommands("sleep 300");
     user_data.addCommands("systemctl enable httpd");
     user_data.addCommands("systemctl start httpd");
