@@ -25,7 +25,7 @@ export class AsgStack extends cdk.Stack {
     );
     user_data.addCommands("cp /tmp/ip.txt /var/www/html/index.html");
     user_data.addCommands("## Simulate boot up by sleep command");
-    user_data.addCommands("sleep 180");
+    user_data.addCommands("sleep 300");
     user_data.addCommands("systemctl enable httpd");
     user_data.addCommands("systemctl start httpd");
 
