@@ -11,8 +11,6 @@ import { ColorStack } from "../lib/week2/color";
 import { VpcStack } from "../lib/week3/vpc";
 import { TransitStack } from "../lib/week3/transit";
 
-
-
 const app = new cdk.App();
 new EipStack(app, "eip");
 new EbsStack(app, "ebs");
@@ -23,4 +21,3 @@ new AsgStack(app, "asg");
 new ColorStack(app, "color");
 new VpcStack(app, "vpc");
 new TransitStack(app, "transit");
-

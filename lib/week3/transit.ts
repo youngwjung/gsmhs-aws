@@ -13,16 +13,40 @@ export class TransitStack extends cdk.Stack {
     // VPC
     const vpc_a = new ec2.Vpc(this, "vpc_a", {
       cidr: "10.0.0.0/16",
+      maxAzs: 1,
+      subnetConfiguration: [
+        {
+          cidrMask: 24,
+          name: "public",
+          subnetType: ec2.SubnetType.PUBLIC,
+        },
+      ],
       natGateways: 0,
     });
 
     const vpc_b = new ec2.Vpc(this, "vpc_b", {
       cidr: "172.16.0.0/16",
+      maxAzs: 1,
+      subnetConfiguration: [
+        {
+          cidrMask: 24,
+          name: "private",
+          subnetType: ec2.SubnetType.ISOLATED,
+        },
+      ],
       natGateways: 0,
     });
 
     const vpc_c = new ec2.Vpc(this, "vpc_c", {
       cidr: "10.0.0.0/16",
+      maxAzs: 1,
+      subnetConfiguration: [
+        {
+          cidrMask: 24,
+          name: "private",
+          subnetType: ec2.SubnetType.ISOLATED,
+        },
+      ],
       natGateways: 0,
     });
 
@@ -70,7 +94,7 @@ export class TransitStack extends cdk.Stack {
       keyName: keypair.valueAsString,
       instanceName: "C",
       vpcSubnets: {
-        subnets: [vpc_c.isolatedSubnets[1]],
+        subnets: [vpc_c.isolatedSubnets[0]],
       },
     });
   }
