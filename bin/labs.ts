@@ -8,6 +8,8 @@ import { SslStack } from "../lib/week2/ssl";
 import { ElbStack } from "../lib/week2/elb";
 import { AsgStack } from "../lib/week2/asg";
 import { ColorStack } from "../lib/week2/color";
+import { VpcStack } from "../lib/week3/vpc";
+import { TransitStack } from "../lib/week3/transit";
 
 
 
@@ -19,4 +21,6 @@ new SslStack(app, "ssl");
 new ElbStack(app, "elb");
 new AsgStack(app, "asg");
 new ColorStack(app, "color");
+new VpcStack(app, "vpc");
+new TransitStack(app, "transit");
 
