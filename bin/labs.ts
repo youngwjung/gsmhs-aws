@@ -11,6 +11,7 @@ import { SqsStack } from "../lib/week2/sqs";
 import { ColorStack } from "../lib/week2/color";
 import { VpcStack } from "../lib/week3/vpc";
 import { TransitStack } from "../lib/week3/transit";
+import { PresignedStack } from "../lib/week5/presigned";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -19,7 +20,8 @@ new CliStack(app, "cli");
 new SslStack(app, "ssl");
 new ElbStack(app, "elb");
 new AsgStack(app, "asg");
+new SqsStack(app, "sqs");
 new ColorStack(app, "color");
 new VpcStack(app, "vpc");
 new TransitStack(app, "transit");
-new SqsStack(app, "sqs");
+new PresignedStack(app, "presigned");
