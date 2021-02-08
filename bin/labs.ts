@@ -12,6 +12,7 @@ import { ColorStack } from "../lib/week2/color";
 import { VpcStack } from "../lib/week3/vpc";
 import { TransitStack } from "../lib/week3/transit";
 import { PresignedStack } from "../lib/week5/presigned";
+import { VPCEndpointStack } from "../lib/week5/vpc-endpoint";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -25,3 +26,4 @@ new ColorStack(app, "color");
 new VpcStack(app, "vpc");
 new TransitStack(app, "transit");
 new PresignedStack(app, "presigned");
+new VPCEndpointStack(app, "vpcendpoint");
