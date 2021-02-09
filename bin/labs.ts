@@ -13,6 +13,7 @@ import { VpcStack } from "../lib/week3/vpc";
 import { TransitStack } from "../lib/week3/transit";
 import { PresignedStack } from "../lib/week5/presigned";
 import { VPCEndpointStack } from "../lib/week5/vpc-endpoint";
+import { EfsStack } from "../lib/week5/efs";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -27,3 +28,5 @@ new VpcStack(app, "vpc");
 new TransitStack(app, "transit");
 new PresignedStack(app, "presigned");
 new VPCEndpointStack(app, "vpcendpoint");
+new EfsStack(app, "efs");
+
