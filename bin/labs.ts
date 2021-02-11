@@ -14,6 +14,7 @@ import { TransitStack } from "../lib/week3/transit";
 import { PresignedStack } from "../lib/week5/presigned";
 import { VPCEndpointStack } from "../lib/week5/vpc-endpoint";
 import { EfsStack } from "../lib/week5/efs";
+import { AlblogStack } from "../lib/week6/alb-log";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -29,4 +30,9 @@ new TransitStack(app, "transit");
 new PresignedStack(app, "presigned");
 new VPCEndpointStack(app, "vpcendpoint");
 new EfsStack(app, "efs");
-
+new AlblogStack(app, "alb-log", {
+  env: {
+    account: process.env.CDK_DEFAULT_ACCOUNT,
+    region: process.env.CDK_DEFAULT_REGION,
+  },
+});
