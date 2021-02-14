@@ -16,6 +16,7 @@ import { VPCEndpointStack } from "../lib/week5/vpc-endpoint";
 import { EfsStack } from "../lib/week5/efs";
 import { AlblogStack } from "../lib/week6/alb-log";
 import { StsStack } from "../lib/week6/sts";
+import { KmsStack } from "../lib/week6/kms";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -38,3 +39,4 @@ new AlblogStack(app, "alb-log", {
   },
 });
 new StsStack(app, "sts");
+new KmsStack(app, "kms");
