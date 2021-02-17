@@ -17,6 +17,8 @@ import { EfsStack } from "../lib/week5/efs";
 import { AlblogStack } from "../lib/week6/alb-log";
 import { StsStack } from "../lib/week6/sts";
 import { KmsStack } from "../lib/week6/kms";
+import { GuarddutyStack } from "../lib/week6/guard-duty";
+
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -40,3 +42,5 @@ new AlblogStack(app, "alb-log", {
 });
 new StsStack(app, "sts");
 new KmsStack(app, "kms");
+new GuarddutyStack(app, "guard-duty");
+
