@@ -19,6 +19,7 @@ import { StsStack } from "../lib/week6/sts";
 import { KmsStack } from "../lib/week6/kms";
 import { GuarddutyStack } from "../lib/week6/guard-duty";
 import { CognitoStack } from "../lib/week6/cognito";
+import { SecretsStack } from "../lib/week6/secrets";
 
 
 const app = new cdk.App();
@@ -45,4 +46,6 @@ new StsStack(app, "sts");
 new KmsStack(app, "kms");
 new GuarddutyStack(app, "guard-duty");
 new CognitoStack(app, "cognito");
+new SecretsStack(app, "secrets");
+
 
