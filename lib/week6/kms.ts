@@ -75,6 +75,7 @@ export class KmsStack extends cdk.Stack {
     temp_user_data.addCommands(
       "mysql -h $(cat /tmp/db_credentials | jq -r '.host') -u $(cat /tmp/db_credentials | jq -r '.username') -p$(cat /tmp/db_credentials | jq -r '.password') < /tmp/db.sql"
     );
+    temp_user_data.addCommands("sleep 60");
     temp_user_data.addCommands(
       "aws ec2 terminate-instances --instance-ids $(curl http://169.254.169.254/latest/meta-data/instance-id) --region $(curl http://169.254.169.254/latest/meta-data/placement/region)"
     );
@@ -125,7 +126,7 @@ export class KmsStack extends cdk.Stack {
       managedPolicies: [
         iam.ManagedPolicy.fromAwsManagedPolicyName("ReadOnlyAccess"),
         iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonSSMFullAccess"),
-        iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonEC2FullAccess")
+        iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonEC2FullAccess"),
       ],
     });
 
