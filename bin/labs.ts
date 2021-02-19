@@ -18,6 +18,7 @@ import { AlblogStack } from "../lib/week6/alb-log";
 import { StsStack } from "../lib/week6/sts";
 import { KmsStack } from "../lib/week6/kms";
 import { GuarddutyStack } from "../lib/week6/guard-duty";
+import { CognitoStack } from "../lib/week6/cognito";
 
 
 const app = new cdk.App();
@@ -43,4 +44,5 @@ new AlblogStack(app, "alb-log", {
 new StsStack(app, "sts");
 new KmsStack(app, "kms");
 new GuarddutyStack(app, "guard-duty");
+new CognitoStack(app, "cognito");
 
