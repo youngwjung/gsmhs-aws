@@ -118,7 +118,7 @@ export class KmsStack extends cdk.Stack {
     );
 
     const iam_user = new iam.User(this, "iam_user", {
-      password: new cdk.SecretValue("asdf1234"),
+      password: new cdk.SecretValue("Asdf!23456"),
       managedPolicies: [
         iam.ManagedPolicy.fromAwsManagedPolicyName("ReadOnlyAccess"),
         iam.ManagedPolicy.fromAwsManagedPolicyName("AmazonSSMFullAccess"),
