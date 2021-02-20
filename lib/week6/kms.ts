@@ -143,7 +143,7 @@ export class KmsStack extends cdk.Stack {
     });
 
     new CfnOutput(this, "iam_user_password", {
-      value: "asdf1234",
+      value: "Asdf!23456",
     });
 
     new CfnOutput(this, "sign_in_url", {
