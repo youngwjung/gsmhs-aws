@@ -21,6 +21,8 @@ import { GuarddutyStack } from "../lib/week6/guard-duty";
 import { CognitoStack } from "../lib/week6/cognito";
 import { SecretsStack } from "../lib/week6/secrets";
 import { SecretsAnswerStack } from "../lib/week6/secrets-answer";
+import { CwlogStack } from "../lib/week7/cw-log";
+
 
 
 
@@ -50,6 +52,8 @@ new GuarddutyStack(app, "guard-duty");
 new CognitoStack(app, "cognito");
 new SecretsStack(app, "secrets");
 new SecretsAnswerStack(app, "secrets-answer");
+new CwlogStack(app, "cw-log");
+
 
 
 
