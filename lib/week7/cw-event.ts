@@ -4,7 +4,6 @@ import * as autoscaling from "@aws-cdk/aws-autoscaling";
 import * as lambda from "@aws-cdk/aws-lambda";
 import { CfnOutput } from "@aws-cdk/core";
 
-
 export class CweventStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
