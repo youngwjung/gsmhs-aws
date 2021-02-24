@@ -23,6 +23,7 @@ import { SecretsStack } from "../lib/week6/secrets";
 import { SecretsAnswerStack } from "../lib/week6/secrets-answer";
 import { CwlogStack } from "../lib/week7/cw-log";
 import { CwmetricStack } from "../lib/week7/cw-metric";
+import { CweventStack } from "../lib/week7/cw-event";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -52,3 +53,4 @@ new SecretsStack(app, "secrets");
 new SecretsAnswerStack(app, "secrets-answer");
 new CwlogStack(app, "cw-log");
 new CwmetricStack(app, "cw-metric");
+new CweventStack(app, "cw-event");
