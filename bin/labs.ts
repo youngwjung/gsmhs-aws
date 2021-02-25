@@ -25,6 +25,7 @@ import { CwlogStack } from "../lib/week7/cw-log";
 import { CwmetricStack } from "../lib/week7/cw-metric";
 import { CweventStack } from "../lib/week7/cw-event";
 import { PortforwadingStack } from "../lib/week7/port-forwarding";
+import { ConfigStack } from "../lib/week7/config";
 
 const app = new cdk.App();
 new EipStack(app, "eip");
@@ -56,3 +57,4 @@ new CwlogStack(app, "cw-log");
 new CwmetricStack(app, "cw-metric");
 new CweventStack(app, "cw-event");
 new PortforwadingStack(app, "port-forwarding");
+new ConfigStack(app, "config");
